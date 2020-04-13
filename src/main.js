@@ -1,4 +1,4 @@
-//parameters
+// parameters
 let config = {
     type: Phaser.AUTO,
     width: 640,
@@ -6,3 +6,5 @@ let config = {
     scene: [ Menu, Play ]
 }
 let game = new Phaser.Game(config);
+// reserve keyboard vars
+let keyF, keyLEFT, keyRIGHT;
