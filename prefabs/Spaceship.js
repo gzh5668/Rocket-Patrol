@@ -8,10 +8,14 @@ class Spaceship extends Phaser.GameObjects.Sprite {
     }
     update() {
         // move spaceship
-        this.x -= 3;
-        // loop spaceship (left edge to right edge)
+        this.x -= game.settings.spaceshipSpeed;
+        // wraparound spaceship (left to right edge)
         if (this.x <= 0-this.width) {
-            this.x = game.config.width;
+            this.reset();
         }
+    }
+
+    reset() {
+        this.x = game.config.width;
     }
 }
